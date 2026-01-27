@@ -16,7 +16,7 @@ void registrar_usuario(Usuario usuarios[], int *usercount) { // Función para re
     scanf("%4s", pin); // lee como cadena y almacena en "pin"
 
     int c;
-    while ((c = getchar()) != '\n' && c != EOF);  //limpuar basura
+    while ((c = getchar()) != '\n' && c != EOF);  //limpiar basura
 
     while (strlen(pin) != 4 || strspn(pin, "0123456789") != 4) { //El strlen verifica la longitud del PIN y strspn verifica que todos los caracteres sean dígitos
         printf("PIN invalido. Ingrese un PIN de 4 digitos: ");
