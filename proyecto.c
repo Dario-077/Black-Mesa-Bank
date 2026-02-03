@@ -90,7 +90,7 @@ void menu_inicio_sesion(Usuario *usuarios) { // Función para mostrar el menú d
 
 void registrar_usuario(Usuario usuarios[], int *usercount) { // Función para registrar un nuevo usuario
     char nombre[50]; // Nombre de usuario maximo 49 caracteres
-    char pin[5]; // 4 dígitos + '\0'
+    char pin[10]; // 4 dígitos + '\0'
     float saldo; // Saldo inicial en dolares
 
     printf("Ingrese su nombre de usuario: ");
@@ -98,7 +98,7 @@ void registrar_usuario(Usuario usuarios[], int *usercount) { // Función para re
     getchar();
 
     printf("Ingrese su clave (PIN de 4 digitos): ");
-    scanf("%4s", pin); // lee como cadena y almacena en "pin"
+    scanf("%9s", pin); // lee como cadena y almacena en "pin"
     getchar();
 
     while (strlen(pin) != 4 || strspn(pin, "0123456789") != 4) { //El strlen verifica la longitud del PIN y strspn verifica que todos los caracteres sean dígitos
@@ -194,4 +194,5 @@ int main(void) {
                 printf("¡Error!, seleccione una opcion valida (1-4).\n"); // Mensaje de error para opción inválida
         }
     } while (1); 
+
 }
