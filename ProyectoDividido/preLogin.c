@@ -14,7 +14,7 @@ void registrar_usuario(Usuario usuarios[], int *usercount) { // Función para re
     getchar();
 
     printf("Ingrese su clave (PIN de 4 digitos): ");
-    scanf("%9s", pin); // lee como cadena y almacena en "pin"
+    scanf("%4s", pin); // lee como cadena y almacena en "pin"
     getchar();
 
     while (strlen(pin) != 4 || strspn(pin, "0123456789") != 4) { //El strlen verifica la longitud del PIN y strspn verifica que todos los caracteres sean dígitos
@@ -49,14 +49,14 @@ void registrar_usuario(Usuario usuarios[], int *usercount) { // Función para re
 
 void iniciarSesion(Usuario usuarios[], int usercount) { // Función para iniciar sesión
     int cuenta; // Numero de cuenta del usuario
-    char pin[4]; // PIN de 4 digitos + '\0'
+    char pin[5]; // PIN de 4 digitos + '\0'
 
     printf("Ingrese numero de cuenta: ");
     scanf("%d", &cuenta);  // lee el numero de cuenta y almacena en "cuenta"
     getchar();
 
     printf("Ingrese PIN: ");
-    scanf("%5s", pin); // lee como cadena y almacena en "pin"
+    scanf("%4s", pin); // lee como cadena y almacena en "pin"
     getchar();
 
     for (int i = 0; i < usercount; i++) {
