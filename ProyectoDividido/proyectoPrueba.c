@@ -9,6 +9,8 @@
 
 
 int main(void) {
+    Usuario usuarios[1000]; // Asegúrate de que 'Usuario' esté definido en preLogin.h
+    int usercount = 0;     // Inicializa el contador en cero
     int registros; // Variable para la opción del menú
 
     do {

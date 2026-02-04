@@ -77,4 +77,3 @@ void mostrarUsuarios(Usuario usuarios[], int usercount) { // Función para mostr
         printf("%d. %s - Numero de Cuenta: %d\n", i+1, usuarios[i].username, usuarios[i].numero_cuenta); // Muestra el nombre de usuario y número de cuenta
     }
 }
-

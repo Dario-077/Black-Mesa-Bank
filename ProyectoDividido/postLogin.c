@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include "preLogin.h"
 #include "postLogin.h"
 
 void estado_cuenta(Usuario *usuarios) { // Función para mostrar el estado de la cuenta
